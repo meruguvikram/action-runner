@@ -1,2 +1,7 @@
 # Add a README
-## Sematic Version testing
+## Semantic Version testing
+### Pull request labels are added
+#### Labels are as follows  
+    semversion-major
+    semversion-minor
+    semversion-patch
