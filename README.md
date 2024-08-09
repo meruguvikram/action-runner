@@ -1,2 +1,3 @@
 # Add a README
-## Sematic Version testing
+## Semantic Version testing
+### Pull request labels are added
