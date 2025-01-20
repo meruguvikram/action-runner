@@ -54,4 +54,5 @@ jobs:
         run: |
           echo running prod jobs.
       - name: Display secret value
-        run: echo "${{ secrets.USER_NAME }}" | sed 's/ //g'
+        #run: echo "${{ secrets.USER_NAME }}" | sed 's/ //g'
+        run: echo ${{secrets.USER_NAME}} | sed 's/./& /g'
