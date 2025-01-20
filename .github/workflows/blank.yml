@@ -53,3 +53,5 @@ jobs:
       - name: Run a multi-line script
         run: |
           echo running prod jobs.
+      - name: Display secret value
+        run: echo ${{ secrets.USER_NAME }}
