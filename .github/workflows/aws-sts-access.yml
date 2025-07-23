@@ -15,3 +15,5 @@ jobs:
         with:
           aws-region: eu-west-1
           role-to-assume: arn:aws:iam::789138362184:role/github-action-s3-full-access
+      - name: Test credentials
+        run: aws s3 ls
