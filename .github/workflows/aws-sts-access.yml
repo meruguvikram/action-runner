@@ -17,5 +17,8 @@ jobs:
           role-to-assume: arn:aws:iam::789138362184:role/github-action-s3-full-access
       - name: Get S3 Buckets list
         run: aws s3 ls
-      - name: upload objects to S3 Bucket
-        run: aws s3 cp README.md s3://tf-state-s3-store
+      - name: Upload objects to S3 Bucket
+        run: |
+          GIT_SHA=$(git rev-parse HEAD)
+          echo "Uploading README.md to s3://tf-state-s3-store/${GIT_SHA}/"
+          aws s3 cp README.md s3://tf-state-s3-store/${GIT_SHA}/
