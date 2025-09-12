@@ -17,6 +17,8 @@ jobs:
           role-to-assume: arn:aws:iam::789138362184:role/github-action-s3-full-access
       - name: Get S3 Buckets list
         run: aws s3 ls
+      - name: AI-based PR Reviewer & Summarizer with Chat Capabilities
+        uses: coderabbitai/ai-pr-reviewer@1.16.2
       - name: Upload objects to S3 Bucket
         run: |
           GIT_SHA=$(git rev-parse HEAD)
